@@ -9,7 +9,7 @@ module Factual
     
     def search_by_values(params)
       values = params.to_json
-      PlacesResponse.new(@client.class.get('/places/resolve', :query => values))
+      PlacesResponse.new(@client.class.get('/places/resolve', :query => {:values => values}))
     end
       
   end
