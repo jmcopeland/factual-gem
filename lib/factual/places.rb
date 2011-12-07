@@ -19,9 +19,9 @@ module Factual
     #   select: fields to include in the query response
     #   sort: field_name:(asc|desc), $distance:(asc|desc), or $relevance:(asc|desc)
     
-    def search_table(optional = {})
+    def search_table(table_id, optional = {})
       optional[:geo] = create_geo_filter(optional[:geo]) if optional[:geo].exists?
-      PlacesResponse.new(@client.class.get("/t/<table_id>", :query => optional))
+      PlacesResponse.new(@client.class.get("/t/#{table_id}", :query => optional))
     end
     
     private

@@ -45,3 +45,9 @@ results = resolve.search_by_values({:name => 'name', :latitude => 37.63326, :lon
 INSTALLATION
 ============
 gem install factual
+
+
+TODO
+====
+1. integrate OAuth
+2. more robust error handling
