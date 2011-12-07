@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Factual::VERSION
   s.authors     = ["Justin Copeland"]
   s.email       = ["justin@gootnau.com"]
-  s.homepage    = "http://github.com/jmcopeland/factual"
+  s.homepage    = "http://github.com/jmcopeland/factual-gem"
   s.summary     = %q{Factual v3 API wrapper}
   s.description = %q{Factual v3 API wrapper}
 
