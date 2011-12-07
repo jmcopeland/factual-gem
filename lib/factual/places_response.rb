@@ -19,8 +19,16 @@ module Factual
         @body.status == "ok" 
     end
     
+    def error?
+        @body.status == "error"
+    end
+    
     def error_message
-      # @body.message.text unless success?
+       @body.message if error?
+    end
+    
+    def error_type
+       @body.error_type if error?
     end
     
     def included_rows
@@ -38,7 +46,7 @@ module Factual
     end
     
     def resolved?
-        data.present? && data[0].resolved
+        success? && data.present? && data[0].resolved
     end
     
     def resolved_venue
