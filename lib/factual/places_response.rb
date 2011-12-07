@@ -16,7 +16,7 @@ module Factual
     end
     
     def success?
-        @body.status == "ok"
+        @body.status == "ok" 
     end
     
     def error_message
@@ -35,6 +35,14 @@ module Factual
         if !@body.response.data.blank?
             @body.response.data
         end
+    end
+    
+    def resolved?
+        data && data[0].resolved
+    end
+    
+    def resolved_venue
+        data[0] if resolved?
     end
     
     private
