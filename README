@@ -18,7 +18,7 @@ crosswalk = Factual::Crosswalk.new(client)
 results = crosswalk.search_by_factual_id('1234567890')
 
 # parameters: namespace, namespace_id
-results = crosswalk.search_by_factual_id('foursquare', '54634563473')
+results = crosswalk.search_by_namespace('foursquare', '54634563473')
 
 
 CROSSREF USAGE
