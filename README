@@ -1,0 +1,47 @@
+Factual Gem
+===========
+Factual Gem is a Ruby wrapper for the Factual API v3.  It is based on the HTTParty gem by John Nunemaker.
+
+
+Factual API v3 Docs
+===================
+http://developer.factual.com/display/docs/Factual+Developer+APIs+Version+3
+You will need to request a beta API key at http://www.factual.com/devtools/beta
+
+
+CROSSWALK USAGE
+===============
+client = Factual::Client.new("YOUR_API_KEY")
+crosswalk = Factual::Crosswalk.new(client)
+
+# parameters: factual_id of the place
+results = crosswalk.search_by_factual_id('1234567890')
+
+# parameters: namespace, namespace_id
+results = crosswalk.search_by_factual_id('foursquare', '54634563473')
+
+
+CROSSREF USAGE
+===============
+client = Factual::Client.new("YOUR_API_KEY")
+crossref = Factual::Crossref.new(client)
+
+# parameters: factual_id of the place
+results = crossref.search_by_factual_id('1234567890')
+
+# parameters: url
+results = crossref.search_by_url('http://www.yelp.com/some-business')
+
+
+RESOLVE USAGE
+===============
+client = Factual::Client.new("YOUR_API_KEY")
+resolve = Factual::Resolve.new(client)
+
+# parameters: hash of values
+results = resolve.search_by_values({:name => 'name', :latitude => 37.63326, :longitude => -127.35625})
+
+
+INSTALLATION
+============
+gem install factual

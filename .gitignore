@@ -1,4 +1,9 @@
 *.gem
 .bundle
+Gemfile
 Gemfile.lock
 pkg/*
+*.sw?
+.DS_Store
+coverage
+pkg
