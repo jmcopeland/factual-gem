@@ -38,7 +38,7 @@ module Factual
     end
     
     def resolved?
-        data && data[0].resolved
+        data.present? && data[0].resolved
     end
     
     def resolved_venue
