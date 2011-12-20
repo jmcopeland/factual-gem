@@ -51,4 +51,4 @@ TODO
 ====
 1. integrate OAuth
 2. fix regular places calls (currently broken)
-2. more robust error handling
+3. more robust error handling
