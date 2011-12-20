@@ -9,6 +9,11 @@ http://developer.factual.com/display/docs/Factual+Developer+APIs+Version+3
 You will need to request a beta API key at http://www.factual.com/devtools/beta
 
 
+INSTALLATION
+============
+gem install factual
+
+
 CROSSWALK USAGE
 ===============
 client = Factual::Client.new("YOUR_API_KEY")
@@ -42,12 +47,8 @@ resolve = Factual::Resolve.new(client)
 results = resolve.search_by_values({:name => 'name', :latitude => 37.63326, :longitude => -127.35625})
 
 
-INSTALLATION
-============
-gem install factual
-
-
 TODO
 ====
 1. integrate OAuth
+2. fix regular places calls (currently broken)
 2. more robust error handling
